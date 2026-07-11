@@ -1,0 +1,11 @@
+C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Domain\bin\Debug\net10.0\WarrantyManagement.Domain.deps.json
+C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Domain\bin\Debug\net10.0\WarrantyManagement.Domain.dll
+C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Domain\bin\Debug\net10.0\WarrantyManagement.Domain.pdb
+C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Domain\obj\Debug\net10.0\WarrantyManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Domain\obj\Debug\net10.0\WarrantyManagement.Domain.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Domain\obj\Debug\net10.0\WarrantyManagement.Domain.AssemblyInfo.cs
+C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Domain\obj\Debug\net10.0\WarrantyManagement.Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Domain\obj\Debug\net10.0\WarrantyManagement.Domain.dll
+C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Domain\obj\Debug\net10.0\refint\WarrantyManagement.Domain.dll
+C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Domain\obj\Debug\net10.0\WarrantyManagement.Domain.pdb
+C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Domain\obj\Debug\net10.0\ref\WarrantyManagement.Domain.dll

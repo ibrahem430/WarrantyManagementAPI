@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "WarrantyManagement.Infrastructure/1.0.0": {
+        "dependencies": {
+          "WarrantyManagement.Application": "1.0.0",
+          "WarrantyManagement.Domain": "1.0.0"
+        },
+        "runtime": {
+          "WarrantyManagement.Infrastructure.dll": {}
+        }
+      },
+      "WarrantyManagement.Application/1.0.0": {
+        "dependencies": {
+          "WarrantyManagement.Domain": "1.0.0"
+        },
+        "runtime": {
+          "WarrantyManagement.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "WarrantyManagement.Domain/1.0.0": {
+        "runtime": {
+          "WarrantyManagement.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WarrantyManagement.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WarrantyManagement.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WarrantyManagement.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
