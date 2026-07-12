@@ -9,3 +9,4 @@ C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.
 C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Domain\obj\Debug\net10.0\refint\WarrantyManagement.Domain.dll
 C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Domain\obj\Debug\net10.0\WarrantyManagement.Domain.pdb
 C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Domain\obj\Debug\net10.0\ref\WarrantyManagement.Domain.dll
+C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Domain\obj\Debug\net10.0\WarrantyManagement.Domain.sourcelink.json

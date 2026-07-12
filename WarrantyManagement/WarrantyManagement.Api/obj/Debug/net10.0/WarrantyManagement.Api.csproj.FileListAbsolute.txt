@@ -34,3 +34,4 @@ C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.
 C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Api\obj\Debug\net10.0\WarrantyManagement.Api.pdb
 C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Api\obj\Debug\net10.0\WarrantyManagement.Api.genruntimeconfig.cache
 C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Api\obj\Debug\net10.0\ref\WarrantyManagement.Api.dll
+C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Api\obj\Debug\net10.0\WarrantyManagement.Api.sourcelink.json
