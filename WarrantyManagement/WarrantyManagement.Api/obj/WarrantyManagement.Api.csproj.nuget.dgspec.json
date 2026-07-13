@@ -32,11 +32,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\WarrantyManagement.Application.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\WarrantyManagement.Application.csproj"
+              "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\WarrantyManagement.Application.csproj": {
+                "projectPath": "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\WarrantyManagement.Application.csproj"
               },
-              "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Infrastructure\\WarrantyManagement.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Infrastructure\\WarrantyManagement.Infrastructure.csproj"
+              "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Infrastructure\\WarrantyManagement.Infrastructure.csproj": {
+                "projectPath": "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Infrastructure\\WarrantyManagement.Infrastructure.csproj"
               }
             }
           }
@@ -56,6 +56,14 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -493,14 +501,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\WarrantyManagement.Application.csproj": {
+    "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\WarrantyManagement.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\WarrantyManagement.Application.csproj",
+        "projectUniqueName": "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\WarrantyManagement.Application.csproj",
         "projectName": "WarrantyManagement.Application",
-        "projectPath": "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\WarrantyManagement.Application.csproj",
+        "projectPath": "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\WarrantyManagement.Application.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\obj\\",
+        "outputPath": "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -542,6 +550,12 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[10.0.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -1173,14 +1187,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Infrastructure\\WarrantyManagement.Infrastructure.csproj": {
+    "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Infrastructure\\WarrantyManagement.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Infrastructure\\WarrantyManagement.Infrastructure.csproj",
+        "projectUniqueName": "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Infrastructure\\WarrantyManagement.Infrastructure.csproj",
         "projectName": "WarrantyManagement.Infrastructure",
-        "projectPath": "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Infrastructure\\WarrantyManagement.Infrastructure.csproj",
+        "projectPath": "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Infrastructure\\WarrantyManagement.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Infrastructure\\obj\\",
+        "outputPath": "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1201,8 +1215,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\WarrantyManagement.Application.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\WarrantyManagement.Application.csproj"
+              "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\WarrantyManagement.Application.csproj": {
+                "projectPath": "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\WarrantyManagement.Application.csproj"
               },
               "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Domain\\WarrantyManagement.Domain.csproj": {
                 "projectPath": "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Domain\\WarrantyManagement.Domain.csproj"
@@ -1225,6 +1239,22 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[10.0.9, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[10.0.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
