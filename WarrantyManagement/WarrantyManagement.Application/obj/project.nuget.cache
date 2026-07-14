@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RxLkVty+xlg=",
+  "dgSpecHash": "Z3vYfj15Lu8=",
   "success": true,
-  "projectFilePath": "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\WarrantyManagement.Application.csproj",
+  "projectFilePath": "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Application\\WarrantyManagement.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.9\\microsoft.extensions.dependencyinjection.abstractions.10.0.9.nupkg.sha512"
   ],

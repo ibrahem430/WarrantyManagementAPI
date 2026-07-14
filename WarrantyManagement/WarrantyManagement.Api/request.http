@@ -1,0 +1,12 @@
+@baseUrl=http://localhost:5054
+
+
+
+POST {{baseUrl}}/api/product
+Content-Type: application/json
+
+{
+    "Name":"lab-ux",
+    "Brand":"Dell",
+    "WarrantyMonths":"3"
+}

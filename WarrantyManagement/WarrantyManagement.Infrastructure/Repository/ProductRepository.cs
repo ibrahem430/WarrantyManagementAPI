@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using WarrantyManagement.Application.Interfaces;
 using WarrantyManagement.Domain.Entities;
 using WarrantyManagement.Infrastructure.dataBase;
@@ -18,23 +19,31 @@ public class ProductRepository(AppDbContext context) : IProductRepository
        return  product;
     }
 
-    public Task DeleteAsync(Product product)
+    public async Task DeleteAsync(Product product)
     {
-        throw new NotImplementedException();
+         context.products.Remove(product);
+        await context.SaveChangesAsync();
     }
 
-    public Task<IEnumerable<Product>> GetAllAsync()
+    public async Task<IEnumerable<Product>> GetAllAsync()
     {
-        throw new NotImplementedException();
+       var products = await context.products.AsNoTracking().ToListAsync();
+       return products;
+
     }
 
-    public Task<Product> GetByIdAsync(Guid id)
+    public  async Task<Product?> GetByIdAsync(Guid id)
     {
-        throw new NotImplementedException();
+
+       var product= await context.products.FirstOrDefaultAsync(p=>p.Id==id);
+
+       return product;
+
     }
 
-    public Task UpdateAsync(Product product)
+    public async Task UpdateAsync(Product product)
     {
-        throw new NotImplementedException();
+       await context.SaveChangesAsync();
+
     }
 }

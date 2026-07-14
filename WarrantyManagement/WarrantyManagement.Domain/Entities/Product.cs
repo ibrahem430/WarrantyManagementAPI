@@ -21,6 +21,8 @@ public Product(string name,string brand,int warrantyMonths)
         WarrantyMonths=warrantyMonths;
     }
 
+    
+
     public void ChangeName(string name)
     {
         ValidateName(name);

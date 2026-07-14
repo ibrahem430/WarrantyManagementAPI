@@ -16,3 +16,5 @@ C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.
 C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Infrastructure\obj\Debug\net10.0\WarrantyManagement.Infrastructure.pdb
 c:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Infrastructure\obj\Debug\net10.0\ref\WarrantyManagement.Infrastructure.dll
 C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Infrastructure\obj\Debug\net10.0\WarrantyManagement.Infrastructure.sourcelink.json
+C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Infrastructure\bin\Debug\net10.0\WarrantyManagement.Infrastructure.runtimeconfig.json
+C:\Users\User\Desktop\Warranty Management\WarrantyManagement\WarrantyManagement.Infrastructure\obj\Debug\net10.0\WarrantyManagement.Infrastructure.genruntimeconfig.cache
