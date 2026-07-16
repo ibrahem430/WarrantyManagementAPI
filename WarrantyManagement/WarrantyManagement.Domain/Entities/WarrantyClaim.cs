@@ -11,7 +11,7 @@ public class WarrantyClaim
 
     public DateTime ClaimDate { get; private set; }
 
-    public string ProblemDescription { get; private set; }
+    public string ProblemDescription { get; private set; } = string.Empty;
 
     public ClaimStatus Status { get; private set; }
 
