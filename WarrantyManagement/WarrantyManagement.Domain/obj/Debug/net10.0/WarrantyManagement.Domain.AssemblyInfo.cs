@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WarrantyManagement.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c73fe4ecfcc355284a3b3778669b17e05d6d9260")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89715a89602452d793d0261e232c39aa87a82245")]
 [assembly: System.Reflection.AssemblyProductAttribute("WarrantyManagement.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WarrantyManagement.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -30,15 +30,18 @@ namespace WarrantyManagement.Infrastructure.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
 
                     b.Property<string>("FullName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
 
                     b.Property<string>("Phone")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
 
                     b.HasKey("Id");
 
@@ -93,6 +96,10 @@ namespace WarrantyManagement.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CustomerId");
+
+                    b.HasIndex("ProductId");
+
                     b.ToTable("sales");
                 });
 
@@ -113,6 +120,8 @@ namespace WarrantyManagement.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("SaleId");
+
                     b.ToTable("Warranties");
                 });
 
@@ -127,7 +136,8 @@ namespace WarrantyManagement.Infrastructure.Migrations
 
                     b.Property<string>("ProblemDescription")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
 
                     b.Property<DateTime?>("ResolvedAt")
                         .HasColumnType("datetime2");
@@ -136,14 +146,51 @@ namespace WarrantyManagement.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("TechnicianNotes")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
 
                     b.Property<Guid>("WarrantyId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("WarrantyId");
+
                     b.ToTable("warrantyClaims");
+                });
+
+            modelBuilder.Entity("WarrantyManagement.Domain.Entities.Sale", b =>
+                {
+                    b.HasOne("WarrantyManagement.Domain.Entities.Customer", null)
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WarrantyManagement.Domain.Entities.Product", null)
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("WarrantyManagement.Domain.Entities.Warranty", b =>
+                {
+                    b.HasOne("WarrantyManagement.Domain.Entities.Sale", null)
+                        .WithMany()
+                        .HasForeignKey("SaleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("WarrantyManagement.Domain.Entities.WarrantyClaim", b =>
+                {
+                    b.HasOne("WarrantyManagement.Domain.Entities.Warranty", null)
+                        .WithMany()
+                        .HasForeignKey("WarrantyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

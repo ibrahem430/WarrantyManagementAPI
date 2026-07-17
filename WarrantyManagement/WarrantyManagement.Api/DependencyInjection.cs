@@ -1,3 +1,5 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using WarrantyManagement.Application.Interfaces;
 using WarrantyManagement.Application.Services;
 
@@ -11,6 +13,7 @@ public static class DependencyInjection
     {
         
         services.AddControllers();
+        services.AddFluentValidationAutoValidation();
         return services;
     }
 
