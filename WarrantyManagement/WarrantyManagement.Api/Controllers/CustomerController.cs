@@ -54,5 +54,19 @@ public class CustomerController(CustomerService customerService):ControllerBase
       var customers=await customerService.GetAllCustomerAsync();
       
        return  Ok(customers);
+ 
+ 
+ 
     }
+
+
+
+    // #################################################
+
+    [HttpGet("test-error")]
+public IActionResult TestError()
+{
+    throw new InvalidOperationException(
+        "This is a test exception.");
+}
 }

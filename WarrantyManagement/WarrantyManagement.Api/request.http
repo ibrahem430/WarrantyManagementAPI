@@ -10,3 +10,7 @@ Content-Type: application/json
     "Brand":"Dell",
     "WarrantyMonths":"3"
 }
+
+
+####
+GET  {{baseUrl}}/api/customer/test-error

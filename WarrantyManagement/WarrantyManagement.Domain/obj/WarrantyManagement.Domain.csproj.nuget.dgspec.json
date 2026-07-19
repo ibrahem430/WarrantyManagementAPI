@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Domain\\WarrantyManagement.Domain.csproj": {}
+    "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Domain\\WarrantyManagement.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Domain\\WarrantyManagement.Domain.csproj": {
+    "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Domain\\WarrantyManagement.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Domain\\WarrantyManagement.Domain.csproj",
+        "projectUniqueName": "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Domain\\WarrantyManagement.Domain.csproj",
         "projectName": "WarrantyManagement.Domain",
-        "projectPath": "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Domain\\WarrantyManagement.Domain.csproj",
+        "projectPath": "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Domain\\WarrantyManagement.Domain.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Domain\\obj\\",
+        "outputPath": "c:\\Users\\User\\Desktop\\Warranty Management\\WarrantyManagement\\WarrantyManagement.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
