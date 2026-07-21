@@ -15,6 +15,11 @@ The project follows **Clean Architecture** principles and is built using **ASP.N
 - Warranty Validation
 - Warranty Claim Management
 - Claim Status Workflow
+- JWT Authentication
+- Refresh Token Authentication
+- Role-Based Authorization
+- FluentValidation
+- Global Exception Handling
 - RESTful API Design
 
 ---
@@ -32,9 +37,10 @@ The project follows **Clean Architecture** principles and is built using **ASP.N
 
 - Claims can only be created for active warranties.
 - Only one warranty claim is allowed per warranty.
-- Claim workflow:
 
-```
+Claim workflow:
+
+```text
 Pending
    │
    ▼
@@ -49,7 +55,7 @@ Completed
 
 or
 
-```
+```text
 Pending
    │
    ▼
@@ -60,7 +66,7 @@ Rejected
 
 ## Project Structure
 
-```
+```text
 WarrantyManagement
 │
 ├── WarrantyManagement.Api
@@ -80,6 +86,8 @@ WarrantyManagement
 - Clean Architecture
 - Repository Pattern
 - Dependency Injection
+- FluentValidation
+- JWT Authentication
 - RESTful API
 - Git
 
@@ -87,7 +95,7 @@ WarrantyManagement
 
 ## Architecture
 
-```
+```text
 Controller
       │
       ▼
@@ -112,21 +120,32 @@ SQL Server
 - Sales
 - Warranties
 - Warranty Claims
+- Authentication
 
 ---
 
-## Current Status
+## Authentication
 
-Core functionality has been completed.
+The API uses JWT Authentication with Refresh Tokens.
 
-### Planned Improvements
+Features include:
 
-- FluentValidation
-- Global Exception Handling
-- Swagger Documentation
-- JWT Authentication
+- User Registration
+- User Login
+- JWT Access Tokens
+- Refresh Tokens
+- Logout
 - Role-Based Authorization
+
+---
+
+## Future Improvements
+
+- Swagger Documentation
 - Unit Testing
+- Pagination
+- Search & Filtering
+- Docker Support
 
 ---
 
