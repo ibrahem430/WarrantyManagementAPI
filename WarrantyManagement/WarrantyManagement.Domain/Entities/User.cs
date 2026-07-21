@@ -16,7 +16,7 @@ public class User
     public Guid RefreshToken {get;private set;}=Guid.Empty;
 
 
-  private User(){}
+//   private User(){}
    public User(
     string userName,
     string email,
@@ -68,6 +68,11 @@ public class User
         ValidateRefreshToken(refreshToken);
         RefreshToken=refreshToken;
     }
+
+    public void RevokeRefreshToken()
+{
+    RefreshToken = Guid.Empty;
+}
    private static void ValidateUserName(string userName)
     {
         if(string.IsNullOrWhiteSpace(userName))
@@ -97,5 +102,6 @@ public class User
         if(refreshToken ==Guid.Empty)
         throw new ArgumentException("The refreshToken is empty");
     }
+
 }
 

@@ -1,4 +1,5 @@
 using System;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WarrantyManagement.Application.Requests.Products;
 using WarrantyManagement.Application.Services;
@@ -7,11 +8,11 @@ namespace WarrantyManagement.Api.Controllers;
 
 [ApiController]
 [Route ("api/product")]
-
+[Authorize]
 public class CustomersController(ProductService productService):ControllerBase
 {
  
-
+[Authorize (Roles ="Admin,Employee")]
     [HttpPost]
     public async Task<IActionResult> AddProduct(CreateProductRequest request)
     {
@@ -21,7 +22,7 @@ public class CustomersController(ProductService productService):ControllerBase
        
 
     }
-
+[Authorize (Roles ="Admin")]
      [HttpPut]
     public async Task<IActionResult> UpdateProduct(UpdateProductRequest request)
     {
@@ -31,7 +32,7 @@ public class CustomersController(ProductService productService):ControllerBase
        
 
     }
-
+[Authorize (Roles ="Admin")]
          [HttpDelete("{productId:guid}")]
     public async Task<IActionResult> DeleteProduct(Guid productId)
     {
@@ -41,7 +42,7 @@ public class CustomersController(ProductService productService):ControllerBase
        
 
     }
-
+[Authorize (Roles ="Admin,Employee,User")]
        [HttpGet("{ProductId:guid}",Name ="GetProductById")]
     public async Task<IActionResult> GetProductById(Guid ProductId)
     {
@@ -51,7 +52,7 @@ public class CustomersController(ProductService productService):ControllerBase
        
 
     }
-
+[Authorize (Roles ="Admin,Employee,User")]
        [HttpGet]
     public async Task<IActionResult> GetAllProducts()
     {

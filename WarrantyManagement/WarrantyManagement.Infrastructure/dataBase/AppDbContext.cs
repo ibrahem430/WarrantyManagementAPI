@@ -17,6 +17,9 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
 
    public DbSet<WarrantyClaim> warrantyClaims=>Set<WarrantyClaim>();
 
+public DbSet<User> users=>Set<User>();
+
+
 
  protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

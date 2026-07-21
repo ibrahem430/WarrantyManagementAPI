@@ -4,6 +4,6 @@ public enum RoleStatus
 {
     Admin=1,
     Employee=2,
-    user=3
+    User=3
     
 }

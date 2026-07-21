@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WarrantyManagement.Application.Requests.Customers;
 using WarrantyManagement.Application.Services;
@@ -6,8 +7,10 @@ namespace WarrantyManagement.Api.Controllers;
 
 [ApiController]
 [Route ("api/customer")]
+[Authorize]
 public class CustomerController(CustomerService customerService):ControllerBase
 {
+    [Authorize (Roles ="Admin,Employee")]
      [HttpPost]
     public async Task<IActionResult> AddCustomer(CreateCustomerRequest request)
     {
@@ -17,7 +20,7 @@ public class CustomerController(CustomerService customerService):ControllerBase
        
 
     }
-
+[Authorize (Roles ="Admin,Employee")]
      [HttpPut]
     public async Task<IActionResult> UpdateCustomer(UpdateCustomerRequest request)
     {
@@ -27,7 +30,7 @@ public class CustomerController(CustomerService customerService):ControllerBase
        
 
     }
-
+[Authorize (Roles ="Admin,Employee")]
          [HttpDelete("{customerId:guid}")]
     public async Task<IActionResult> DeleteCustomer(Guid customerId)
     {
@@ -37,7 +40,7 @@ public class CustomerController(CustomerService customerService):ControllerBase
        
 
     }
-
+[Authorize (Roles ="Admin,Employee")]
        [HttpGet("{customerId:guid}",Name ="GetCustomerById")]
     public async Task<IActionResult> GetCustomerById(Guid customerId)
     {
@@ -47,7 +50,7 @@ public class CustomerController(CustomerService customerService):ControllerBase
        
 
     }
-
+[Authorize (Roles ="Admin,Employee")]
        [HttpGet]
     public async Task<IActionResult> GetAllCustomer()
     {

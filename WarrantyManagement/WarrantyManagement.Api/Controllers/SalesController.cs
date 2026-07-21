@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WarrantyManagement.Application.Requests.Sales;
 using WarrantyManagement.Application.Services;
@@ -7,9 +8,10 @@ namespace WarrantyManagement.Api.Controllers;
 
 [ApiController]
 [Route("api/sales")]
-
+[Authorize]
 public class SalesController(SaleService saleService):ControllerBase
 {
+   [Authorize (Roles ="Admin,Employee")]
       [HttpPost]
     public async Task<IActionResult> AddSale(CreateSaleRequest request)
     {
@@ -19,7 +21,7 @@ public class SalesController(SaleService saleService):ControllerBase
        
 
     }
-
+[Authorize (Roles ="Admin")]
      [HttpPut]
     public async Task<IActionResult> UpdateSale(UpdateSaleRequest request)
     {
@@ -29,7 +31,7 @@ public class SalesController(SaleService saleService):ControllerBase
        
 
     }
-
+[Authorize (Roles ="Admin")]
          [HttpDelete("{saleId:guid}")]
     public async Task<IActionResult> DeleteSale(Guid saleId)
     {
@@ -39,7 +41,7 @@ public class SalesController(SaleService saleService):ControllerBase
        
 
     }
-
+[Authorize (Roles ="Admin,Employee")]
        [HttpGet("{saleId:guid}",Name ="GetSaleById")]
     public async Task<IActionResult> GetSaleById(Guid saleId)
     {
@@ -49,7 +51,7 @@ public class SalesController(SaleService saleService):ControllerBase
        
 
     }
-
+[Authorize (Roles ="Admin,Employee")]
        [HttpGet]
     public async Task<IActionResult> GetAllSales()
     {

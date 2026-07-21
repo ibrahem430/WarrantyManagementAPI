@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WarrantyManagement.Application.Requests.WarrantyClaim;
 using WarrantyManagement.Application.Services;
@@ -6,11 +7,17 @@ namespace WarrantyManagement.Api.Controllers;
 
 [ApiController]
 [Route("api/warranty-claims")]
+[Authorize]
 public class WarrantyClaimsController(
     WarrantyClaimService warrantyClaimService)
     : ControllerBase
 {
+
+    //  Admin=1,
+    // Employee=2,
+    // user=3
     [HttpPost]
+    [Authorize (Roles ="Admin,Employee")]
     public async Task<IActionResult> AddWarrantyClaim(
         CreateWarrantyClaimRequest request)
     {
@@ -22,8 +29,9 @@ public class WarrantyClaimsController(
             new { warrantyClaimId = warrantyClaim.Id },
             warrantyClaim);
     }
-
-    [HttpDelete("{warrantyClaimId:guid}")]
+    
+    [HttpDelete("{warrantyClaimId:guid}")] 
+    [Authorize (Roles ="Admin")]
     public async Task<IActionResult> DeleteWarrantyClaim(
         Guid warrantyClaimId)
     {
@@ -32,7 +40,7 @@ public class WarrantyClaimsController(
 
         return NoContent();
     }
-
+    [Authorize (Roles ="Admin,Employee")]
     [HttpGet(
         "{warrantyClaimId:guid}",
         Name = "GetWarrantyClaimById")]
@@ -45,7 +53,7 @@ public class WarrantyClaimsController(
 
         return Ok(warrantyClaim);
     }
-
+    [Authorize (Roles ="Admin,Employee")]
     [HttpGet]
     public async Task<IActionResult> GetAllWarrantyClaims()
     {
@@ -54,7 +62,7 @@ public class WarrantyClaimsController(
 
         return Ok(warrantyClaims);
     }
-
+     [Authorize (Roles ="Admin,Employee")]
     [HttpPut("{warrantyClaimId:guid}/approve")]
     public async Task<IActionResult> ApproveClaim(
         Guid warrantyClaimId)
@@ -65,7 +73,7 @@ public class WarrantyClaimsController(
 
         return Ok(warrantyClaim);
     }
-
+    [Authorize (Roles ="Admin,Employee")]
     [HttpPut("{warrantyClaimId:guid}/start-repair")]
     public async Task<IActionResult> StartRepairClaim(
         Guid warrantyClaimId)
@@ -76,7 +84,7 @@ public class WarrantyClaimsController(
 
         return Ok(warrantyClaim);
     }
-
+     [Authorize (Roles ="Admin,Employee")]
     [HttpPut("complete")]
     public async Task<IActionResult> CompleteClaim(
         UpdateWarrantyClaimRequest request)
@@ -86,7 +94,7 @@ public class WarrantyClaimsController(
 
         return Ok(warrantyClaim);
     }
-
+    [Authorize (Roles ="Admin,Employee")]
     [HttpPut("reject")]
     public async Task<IActionResult> RejectClaim(
         UpdateWarrantyClaimRequest request)

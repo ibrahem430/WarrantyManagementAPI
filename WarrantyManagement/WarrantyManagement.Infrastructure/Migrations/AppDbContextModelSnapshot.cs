@@ -103,6 +103,38 @@ namespace WarrantyManagement.Infrastructure.Migrations
                     b.ToTable("sales");
                 });
 
+            modelBuilder.Entity("WarrantyManagement.Domain.Entities.User", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<Guid>("RefreshToken")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("users");
+                });
+
             modelBuilder.Entity("WarrantyManagement.Domain.Entities.Warranty", b =>
                 {
                     b.Property<Guid>("Id")

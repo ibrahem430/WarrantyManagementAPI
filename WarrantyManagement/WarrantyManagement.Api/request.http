@@ -1,16 +1,61 @@
 @baseUrl=http://localhost:5054
 
 
-
-POST {{baseUrl}}/api/product
+###
+POST  {{baseUrl}}/api/product
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmZjOTFjOS1lM2ZjLTRhYTEtYTFjNy00Y2VmMWFhMzc0MjkiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQHRlc3QuY29tIiwicm9sZSI6IkFkbWluIiwianRpIjoiNzlhYTk1MTYtYmY5ZC00NWI1LWFhYmUtZjFkZGI5Mjc0ZTQ3IiwibmJmIjoxNzg0NjczMjIyLCJleHAiOjE3ODQ2NzQ0MjIsImlhdCI6MTc4NDY3MzIyMiwiaXNzIjoibG9jYWxob3N0IiwiYXVkIjoibG9jYWxob3N0In0.JdGFVfXNcEVUwoLd1Ga-ifK9wmxD8iut5HXjQgF1qHc
 Content-Type: application/json
 
 {
-    "Name":"lab-ux",
-    "Brand":"Dell",
-    "WarrantyMonths":"3"
+    "Name":"labux",
+    "Brand":"Del",
+    "WarrantyMonths":"8"
 }
 
 
 ####
 GET  {{baseUrl}}/api/customer/test-error
+
+
+
+@WarrantyManagement.Api_HostAddress = https://localhost:5001
+
+### Register User
+POST {{baseUrl}}/api/register
+Content-Type: application/json
+
+{
+  "UserName": "admin",
+  "email": "admin@test.com",
+  "password": "Admin@123",
+  "role": 1
+}
+
+
+###
+
+### Login
+POST {{baseUrl}}/api/login
+Content-Type: application/json
+
+{
+  "userName": "admin",
+  "email": "admin@test.com",
+  "password": "Admin@123"
+}
+
+
+### Refresh Token
+POST {{baseUrl}}/api/refresh-token
+Content-Type: application/json
+
+{
+  "refreshJWTToken": "65fb6940-f1cf-4a32-a4fa-5551b3414a7b"
+}
+###
+POST {{baseUrl}}/api/logout
+Content-Type: application/json
+
+{
+  "refreshJWTToken":"65fb6940-f1cf-4a32-a4fa-5551b3414a7b"
+}

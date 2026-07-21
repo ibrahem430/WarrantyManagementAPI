@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WarrantyManagement.Application.Requests.Warranty;
 using WarrantyManagement.Application.Services;
@@ -7,9 +8,10 @@ namespace WarrantyManagement.Api.Controllers;
 
 [ApiController]
 [Route("api/warranties")]
-
+[Authorize]
 public class WarrantiesController(WarrantyService warrantyService) :ControllerBase
 {
+    [Authorize (Roles ="Admin,Employee")]
       [HttpPost]
     public async Task<IActionResult> AddWarranty(CreateWarrantyRequest request)
     {
@@ -21,7 +23,7 @@ public class WarrantiesController(WarrantyService warrantyService) :ControllerBa
     }
 
 
-
+[Authorize (Roles ="Admin")]
          [HttpDelete("{warrantyId:guid}")]
     public async Task<IActionResult> DeleteWarranty(Guid warrantyId)
     {
@@ -31,7 +33,7 @@ public class WarrantiesController(WarrantyService warrantyService) :ControllerBa
        
 
     }
-
+[Authorize (Roles ="Admin,Employee")]
        [HttpGet("{warrantyId:guid}",Name ="GetWarrantyById")]
     public async Task<IActionResult> GetWarrantyById(Guid warrantyId)
     {
@@ -41,7 +43,7 @@ public class WarrantiesController(WarrantyService warrantyService) :ControllerBa
        
 
     }
-
+[Authorize (Roles ="Admin,Employee")]
        [HttpGet]
     public async Task<IActionResult> GetAllWarranties()
     {

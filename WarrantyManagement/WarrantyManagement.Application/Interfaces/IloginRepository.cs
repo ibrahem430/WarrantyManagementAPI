@@ -1,11 +1,19 @@
-// using WarrantyManagement.Domain.Entities;
+using WarrantyManagement.Domain.Entities;
 
-// namespace WarrantyManagement.Application.Interfaces;
+namespace WarrantyManagement.Application.Interfaces;
 
 
-// public interface IloginRepository
-// {
-//     Task<User> login (Guid id);
-//     Task<>
+public interface IloginRepository
+{
+   
+    Task<User?> GetByUserNameAsync(string username);
 
-// } 
+    Task UpdateRefreshTokenAsync();
+
+    Task<User> GetRefreshToken(Guid refrEshToken);
+
+    
+    
+   
+  
+}

@@ -30,6 +30,8 @@ public static class DependencyInjection
        services.AddScoped<ICustomerRepository,CustomerRepository>();
        services.AddScoped<IWarrantyRepository,WarrantyRepository>();
        services.AddScoped<IWarrantyClaimRepository,WarrantyClaimRepository>();
+       services.AddScoped<IRegisterRepository, RegisterRepository>();
+       services.AddScoped<IloginRepository, LoginRepository>();
 
 
 
